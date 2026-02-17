@@ -1,6 +1,8 @@
 html {
   box-sizing: border-box;
-  
+  scroll-behavior: smooth;
+
+  scroll-padding-top: 50px;
 }
 
 
@@ -14,8 +16,6 @@ body {
   margin: 0;
   padding: 0;
   font-family: var(--font-body);
-
-  height: 15000px;
 }
 
 
@@ -277,13 +277,14 @@ a {
 .hero {
   display: flex;
   align-items: center;
+  justify-content: center;
 
   padding-top: 9rem;
   background: linear-gradient(
     to top right,
     #0B0B0C 0%,
     #0B0B0C 15%,
-    #222223 100%
+    #1d1d1f 100%
   );
   position: relative;
   min-height: 90vh;
@@ -295,6 +296,7 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
+  max-width: 120rem;
 }
 
 
@@ -511,6 +513,7 @@ a {
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    column-gap: 3rem;
   }
 
   .features .text h2 {
@@ -518,29 +521,18 @@ a {
     margin: 0;
     flex: 1.3;
 
-    margin-left: auto;
-    width: 100%;
   }
 
   .features h2::after {
-    position: absolute;
-    content: "";
-    left: auto;
-    bottom: auto;
-
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    height: 3rem;
-    width: 1px;
-    background-color: white;
+    display: none;
   }
 
 
   .features .text p {
-      padding-bottom: 0;
-      flex: 1;
-    }
+    padding-bottom: 0;
+    flex: 1;
+  }
+
 
 }
 
@@ -770,6 +762,8 @@ a {
   .offer .offer-inner .pricing {
     width: auto;
   }
+
+  
 
 }
 
@@ -1008,12 +1002,38 @@ a {
     max-width: max(32rem, 80%);
   }
 
-
-
-
 }
 
 
+
+
+@media (min-width: 1225px) {
+  
+  .projects .text {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    column-gap: 3rem;
+  }
+
+  .projects .text h2 {
+    padding: 0;
+    margin: 0;
+    flex: 1.3;
+
+  }
+
+  .projects h2::after {
+    display: none;
+  }
+
+
+  .projects .text p {
+    padding-bottom: 0;
+    flex: 1;
+  }
+
+}
 
 
 
@@ -1064,7 +1084,6 @@ a {
 
 .cooperation .scroller {
   display: flex;
-  overflow-x: auto;
   width: 100%;
   box-sizing: border-box;
   scroll-snap-type: x mandatory;
@@ -1073,8 +1092,11 @@ a {
   -ms-overflow-style: none;
   scrollbar-width: none;
   position: relative;
-  overflow-y: hidden;
   padding-top: 3.5rem;
+
+  overflow-x: hidden;
+  overflow-y: visible;
+  touch-action: pan-y;
 }
 
 
@@ -1377,7 +1399,33 @@ a {
 
 
 
+@media (min-width: 1225px) {
 
+  .faq .text {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    column-gap: 3rem;
+  }
+
+  .faq .text h2 {
+    padding: 0;
+    margin: 0;
+    flex: 1.3;
+
+  }
+
+  .faq h2::after {
+    display: none;
+  }
+
+
+  .faq .text p {
+    padding-bottom: 0;
+    flex: 1;
+  }
+
+}
 
 
 
@@ -1397,6 +1445,17 @@ a {
   padding-block: var(--space);
   padding-inline: 16px;
   align-items: center;
+  position: relative;
+}
+
+.contact-us::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 1px;
+  background-color: white;
 }
 
 .contact-us .left-section {
@@ -1409,7 +1468,7 @@ a {
   display: flex;
   flex-direction: column;
   padding-bottom: 2rem;
-  max-width: 90rem;
+  max-width: 65rem;
 }
 
 
@@ -1686,7 +1745,7 @@ textarea:-webkit-autofill:focus {
 
 
 .footer .rights {
-  margin-top: 4rem;
+  margin-top: 2rem;
   width: 100%;
   position: relative;
   display: flex;

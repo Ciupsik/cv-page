@@ -1,11 +1,8 @@
 
-
-
-iframe {
-  background-color: rgb(55, 0, 255);
+body {
+  padding: 0;
+  margin: 0;
 }
 
 
-html {
-  font-size: 32px;
-}
+

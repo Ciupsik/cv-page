@@ -1,0 +1,412 @@
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+
+body {
+  background-color: rgb(255, 255, 255);
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-body);
+
+  
+}
+
+
+p, h1, h2, h3, h4, h5, h6, button {
+  margin: 0;
+  padding: 0;
+
+  
+  line-height: 130%;
+  letter-spacing: 0.01em;
+  
+  
+}
+
+h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+}
+
+p {
+  font-weight: 350;
+  color: rgba(0,0,0,0.75);
+}
+
+
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+.btn {
+  font-family: var(--font-body);
+  font-weight: 600;
+  background: none;
+  border: none;
+  box-shadow:
+    inset 0 1.25px 0 0 #ffffff,
+    inset 0 -1.25px 0 0 #ffffff;
+  padding: .45rem 1.2rem .4rem 1.2rem;
+  font-size: 1rem;
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+  text-align: center;
+
+  transition: background-color 0.2s ease-in-out;
+}
+
+.btn:hover {
+  background-color: rgba(0, 0, 0, 0.5)
+
+}
+
+
+
+:root {
+  --color-creamy: rgb(200, 158, 126);
+
+  --font-heading: 'Playfair', Georgia, serif;
+  --font-body: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+
+  --space: clamp(5rem, 4rem + 3vw, 6rem);
+
+
+  --h2-size: clamp(1rem, 10vw, 3rem);
+  --h3-size: clamp(1rem, 8vw, 2.5rem);
+}
+
+
+
+
+
+
+
+
+/*---------------------HEADER---------------------*/
+
+
+.header {
+  position: fixed;
+  background-color: rgb(0, 0, 0);
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 4rem;
+  z-index: 10;
+  padding-inline: 12px;
+}
+
+
+.header .header-inner {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: space-between;
+  margin-inline: auto;
+}
+
+
+.header .header-inner .logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-creamy);
+  height: 100%;
+  padding-inline: 16px;
+  cursor: pointer;
+  font-family: 'Jura', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  font-size: clamp(28px, 16px + 4vw, 1.75rem + 8px);
+  color: rgb(255, 255, 255);
+  font-weight: 600;
+}
+
+
+
+
+.header .header-inner .menu-bars,
+.header .header-inner .menu-x {
+  font-size: min(.75rem + 5.5vw, 2rem);
+  cursor: pointer;
+  color: white;
+}
+
+.header .header-inner .menu-x {
+  display: none;
+}
+
+.header.mobile-active .header-inner .menu-x {
+  display: inline-block
+}
+.header.mobile-active .header-inner .menu-bars {
+  display: none;
+}
+
+
+.header .header-inner .nav {
+  display: flex;
+  flex-direction: row;
+  column-gap: clamp(1rem, 4vw, 4rem);
+
+  padding-bottom: .25rem;
+  display: none;
+}
+
+.header .header-inner .nav a {
+  font-size: clamp(.8rem, 3vw, 1.25rem);
+  font-weight: 350;
+  position: relative;
+  cursor: pointer;
+  color: rgb(255, 255, 255);
+
+  transition: color 0.2s ease-in-out;
+}
+.header .header-inner .nav a:not(:first-child)::after {
+  content: "";
+  position: absolute;
+  left: calc(clamp(1rem, 4vw, 4rem) / -2);
+  bottom: -.25rem;
+  top: -.25rem;
+  width: 1px;
+  background-color: rgb(255, 255, 255);
+}
+.header .header-inner .nav a::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -.25rem;
+  height: 1px;
+  width: 0;
+  background-color: var(--color-creamy);
+
+  transition: width 0.2s ease-in-out;
+}
+.header .header-inner .nav a:hover {
+  color: var(--color-creamy);
+}
+.header .header-inner .nav a:hover::before {
+  width: 100%;
+}
+
+
+
+
+
+
+.header .overlay-nav {
+  position: fixed;
+  top: 4rem;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(200, 158, 126, 0.9);
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.5rem;
+  align-items: center;
+  justify-content: center;
+  display: none;
+}
+
+.header .overlay-nav a {
+  font-family: var(--font-heading);
+  font-size: clamp(1.5rem, 18vw, 5rem);
+  color: white;
+  font-weight: 700;
+}
+
+
+.header.mobile-active .overlay-nav {
+  display: flex;
+}
+
+
+
+
+@media (min-width: 825px) {
+
+  .header {
+    height: 4.5rem;
+    padding-top: 1rem;
+    padding-left: 2vw;
+    padding-right: 2vw;
+  }
+
+
+  .header .header-inner .logo {
+    border-top-left-radius: .4rem;
+    border-top-right-radius: .4rem;
+
+    border-bottom-left-radius: .1rem;
+    border-bottom-right-radius: .1rem;
+  }
+
+
+  .header .header-inner .menu-bars {
+    display: none;
+  }
+
+  .header .header-inner .nav {
+    display: flex;
+  }
+
+
+
+}
+
+
+
+
+
+
+
+
+
+/*---------------------PRICE BG---------------------*/
+
+
+.price-bg {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+
+  padding-block: var(--space);
+  padding-inline: 16px;
+
+  margin-top: 4rem;
+}
+
+.price-bg::before {
+  content: "";
+  position: absolute;
+  background: 
+    linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0) 25%),
+    url('../imgs/price-bg-img.jpg');
+
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  inset: 0;
+  z-index: 0;
+  filter: grayscale(90%); 
+}
+
+
+
+.price-bg .btn {
+  z-index: 1;
+  color: white;
+}
+
+
+
+
+@media (min-width: 825px) {
+  .price-bg {
+    margin-top: 4.5rem;
+  }
+}
+
+
+
+
+
+
+
+/*---------------------PRICE LIST---------------------*/
+
+
+.price-list {
+  background-color: rgba(0,0,0,0.75);
+  padding: 2rem clamp(16px, 4vw, 2.5rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 60rem;
+  width: 100%;
+  z-index: 1;
+  margin-bottom: var(--space);
+  
+
+  border-top: solid .75rem var(--color-creamy);
+}
+
+.price-list h1 {
+  color: var(--color-creamy);
+  font-family: var(--font-heading);
+  font-size: clamp(1.25rem, 12vw, 4rem);
+  text-align: center;
+  padding-bottom: 4rem;
+}
+
+.price-list .services {
+  display: flex;
+  flex-direction: column;
+  row-gap: 5rem;
+  width: 100%;
+}
+
+.price-list .services .service {
+  display: flex;
+  flex-direction: column;
+}
+
+.price-list .services .service .name-and-price {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 1rem;
+}
+
+.price-list .services .service .name-and-price .name {
+  padding-bottom: .25rem;
+}
+
+.price-list .services .service .name-and-price .name,
+.price-list .services .service .name-and-price .price {
+  color: white;
+  font-weight: 550;
+  font-size: 1.25rem;
+}
+
+
+
+.price-list .services .service .title {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1rem;
+} 
+
+
+
+
+
+@media (min-width: 425px) {
+  .price-list .services .service .name-and-price {
+    flex-direction: row;
+  }
+
+  .price-list .services .service .name-and-price .name {
+    padding-bottom: none;
+    padding-right: 1rem;
+  }
+}
