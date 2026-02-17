@@ -1,7 +1,11 @@
-function barsChange() {
+
+
+function navMobileChange() {
 
   const navBars = document.querySelector('.header .bars-btn')
   const navX = document.querySelector('.header .x-btn')
+
+  const mobileBtns = document.querySelectorAll('.header .mobile-nav li')
 
   const header = document.querySelector('.header')
 
@@ -22,12 +26,22 @@ function barsChange() {
   })
 
 
+
+  mobileBtns.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      header.classList.remove('nav-open')
+    })
+  })
+
+
+  if (window.innerWidth >= 725) {
+    header.classList.remove('nav-open')
+  }
+
+
 }
 
-
-barsChange()
-
-
+navMobileChange()
 
 
 

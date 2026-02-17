@@ -388,6 +388,7 @@ p {
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
+  border-radius: 6px;
 }
 
 .menu .category:nth-of-type(2) .category-inner .image {

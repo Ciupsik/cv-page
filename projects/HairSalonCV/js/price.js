@@ -34,6 +34,11 @@ function headerMobileHandler() {
   })
 
 
+  if (window.innerWidth >= 825) {
+    header.classList.remove('mobile-active')
+  }
+
+
 }
 
 

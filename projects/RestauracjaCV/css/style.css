@@ -907,11 +907,17 @@ p {
   
 }
 
+
+
+
+
 .footer .heading h2 {
-  font-size: clamp(1.25rem, 1rem + 4vw, min(3rem, 72px));
+  font-size: clamp(1.25rem, 1rem + 4vw, min(2.5rem, 64px));
   font-family: var(--font-heading);
   font-weight: 800;
-  padding-bottom: .4rem;
+  padding-bottom: 1rem;
+  line-height: 100%;
+  
   color: white;
 }
 

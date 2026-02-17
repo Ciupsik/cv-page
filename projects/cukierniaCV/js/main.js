@@ -7,7 +7,9 @@
 function mobileNavDisplay() {
 
   const navBars = document.querySelector('.header .menu-bars');
-  const navX = document.querySelector('.header .menu-x')
+  const navX = document.querySelector('.header .menu-x');
+
+  const mobileBtns = document.querySelectorAll('.header .nav-mobile li');
 
   const header = document.querySelector('.header');
 
@@ -21,12 +23,23 @@ function mobileNavDisplay() {
   })
 
 
+  mobileBtns.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      header.classList.remove('mobile-active')
+    })
+  })
+
+
   window.addEventListener('resize', () => {
     if (window.innerWidth >= 700) {
       header.classList.remove('mobile-active')
     }
   })
 
+
+  if (window.innerWidth >= 700) {
+    header.classList.remove('mobile-active')
+  }
 
 }
 

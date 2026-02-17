@@ -13,6 +13,8 @@ function mobileNavDisplay() {
   const navBars = document.querySelector('.header .menu-bars');
   const navX = document.querySelector('.header .menu-x');
 
+  const mobileBtns = document.querySelectorAll('.header .mobile-nav li');
+
   const header = document.querySelector('.header')
 
 
@@ -30,6 +32,16 @@ function mobileNavDisplay() {
       header.classList.remove('mobile-active')
     }
   })
+
+
+  mobileBtns.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      header.classList.remove('mobile-active')
+    })
+  })
+
+
+
 
 
 
