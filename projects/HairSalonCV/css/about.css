@@ -263,9 +263,72 @@ a {
     display: flex;
   }
 
-
-
 }
+
+
+
+
+
+
+
+
+
+/*---------------------IMGS ZOOM---------------------*/
+
+
+.lightbox {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+
+.lightbox .image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  max-width: min(60%, 50rem, 50vh);
+
+  background-color: red;
+}
+
+
+.lightbox-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+
+.lightbox .close {
+  position: absolute;
+  color: white;
+  font-size: 1.5rem;
+  z-index: 1100;
+  right: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  width: 40px;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+
+
 
 
 
@@ -280,7 +343,7 @@ a {
 
 
 .top-image {
-  background-image: url('../imgs/about-hero.jpg');
+  background-image: url('../imgs/about-hero.webp');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -344,8 +407,7 @@ a {
 .portfolio .images .image {
   width: 100%;
   overflow: hidden;
-
-  
+  cursor: pointer;
 }
 
 
@@ -364,7 +426,12 @@ a {
   height: 100%;
   aspect-ratio: 1 / 1;
   object-fit: cover;
+  cursor: pointer;
 
+  transition: transform 0.2s ease-in-out;
+}
+.portfolio .images .small .image img:hover {
+  transform: scale(1.015);
 }
 
 
@@ -385,8 +452,12 @@ a {
   height: 100%;
   aspect-ratio: 1 / 1.75;
   object-fit: cover;
-}
 
+  transition: transform 0.2s ease-in-out;
+}
+.portfolio .images .medium .image img:hover {
+  transform: scale(1.01);
+}
 
 
 
@@ -407,8 +478,12 @@ a {
   min-height: 450px;
   aspect-ratio: 1 / 1;
   object-fit: cover;
-}
 
+  transition: transform 0.2s ease-in-out;
+}
+.portfolio .images .big .image img:hover {
+  transform: scale(1.0075);
+}
 
 
 
@@ -502,6 +577,17 @@ a {
 .salons .salon .images .image {
   width: 100%;
   overflow: hidden;
+  cursor: pointer;
+}
+
+
+.salons .salon .images .image img {
+  transition: transform 0.2s ease-in-out;
+}
+
+
+.salons .salon .images .image img:hover {
+  transform: scale(1.01);
 }
 
 .salons .salon .images .img1 {

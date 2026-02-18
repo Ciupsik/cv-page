@@ -249,7 +249,7 @@ p {
 .hero {
   background-image: 
     linear-gradient(rgba(21,11,4,0.6), rgba(21,11,4,0.6)), 
-    url(../imgs/hero.jpg);
+    url(../imgs/hero.webp);
   
   filter: brightness(1.1);
   height: max(100vh - 5rem, 32rem);
@@ -478,7 +478,7 @@ p {
 .review {
   background-image: 
     linear-gradient(rgba(21,11,4,0.6), rgba(21,11,4,0.6)), 
-    url(../imgs/reviews-img.jpg);
+    url(../imgs/reviews-img.webp);
   
   filter: brightness(1.1);
   

@@ -73,7 +73,7 @@ function generateMenu() {
     
     category.items.forEach((item) => {
       itemsHTML += `
-        <p class="item">${item.name} <br><span class="price"><span class="dots"></span> ${item.price.toFixed(2)}zł - ${item.weigth}</span></p>
+        <p class="item">${item.name} <br><span class="price"><span class="dots"></span> ${item.price.toFixed(2).replace('.', ',')} zł - ${item.weigth}</span></p>
       `
     })
 

@@ -301,7 +301,7 @@ a {
   position: absolute;
   background: 
     linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0) 25%),
-    url('../imgs/price-bg-img.jpg');
+    url('../imgs/price-bg-img.webp');
 
   background-position: center center;
   background-size: cover;

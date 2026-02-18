@@ -173,7 +173,13 @@ function generateAndGetCategoryElements(category) {
     scrollerItemsHTML += `
       <div class="slide" data-id="${id}">
         <div class="image">
-          <img src="${item.img}">
+
+          <img
+            src="${item.img}"
+            alt="Sugar and Slice, pozycja w menu"
+            loading="lazy" 
+            decoding="async">
+
         </div>
         <p>${item.name}</p>
       </div>

@@ -283,7 +283,7 @@ a {
       rgba(0, 0, 0, 0.2) 40%,
       rgba(0, 0, 0, 0.15) 100%
     ),
-    url('../imgs/hero.jpg');
+    url('../imgs/hero.webp');
 
   background-position: 72% center;
   background-size: cover;

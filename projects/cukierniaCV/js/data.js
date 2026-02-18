@@ -3,27 +3,27 @@ export const offers = {
     {
       id: 0,
       name: 'Serniczek Malinowy',
-      img: "../imgs/offersImgs/Desery/serniczek-malinowy.jpg"
+      img: "../imgs/offersImgs/Desery/serniczek-malinowy.webp"
     },
     {
       id: 1,
       name: 'Panna Cotta',
-      img: "../imgs/offersImgs/Desery/panna-cotta-malinowa.jpg"
+      img: "../imgs/offersImgs/Desery/panna-cotta-malinowa.webp"
     },
     {
       id: 2,
       name: 'Serniczek Pistacjowy',
-      img: "../imgs/offersImgs/Desery/serniczek-pistacjowy.jpg"
+      img: "../imgs/offersImgs/Desery/serniczek-pistacjowy.webp"
     },
     {
       id: 3,
       name: 'Mus Czekoladowy',
-      img: "../imgs/offersImgs/Desery/mus-czekoladowy.jpg"
+      img: "../imgs/offersImgs/Desery/mus-czekoladowy.webp"
     },
     {
       id: 4,
       name: 'Tiramisu',
-      img: "../imgs/offersImgs/Desery/tiramisu.jpg"
+      img: "../imgs/offersImgs/Desery/tiramisu.webp"
     },
   ],
 
@@ -31,27 +31,27 @@ export const offers = {
     {
       id: 0,
       name: 'Brownie',
-      img: "../imgs/offersImgs/Ciasta/brownie.jpg"
+      img: "../imgs/offersImgs/Ciasta/brownie.webp"
     },
     {
       id: 1,
       name: 'Serniczek Klasyczny',
-      img: "../imgs/offersImgs/Ciasta/serniczek-klasyczny.jpg"
+      img: "../imgs/offersImgs/Ciasta/serniczek-klasyczny.webp"
     },
     {
       id: 2,
       name: 'Ciasto Czekoladowe',
-      img: "../imgs/offersImgs/Ciasta/ciasto-czekoladowe.jpg"
+      img: "../imgs/offersImgs/Ciasta/ciasto-czekoladowe.webp"
     },
     {
       id: 3,
       name: 'Sernik Wiedeński',
-      img: "../imgs/offersImgs/Ciasta/sernik-wiedenski.jpg"
+      img: "../imgs/offersImgs/Ciasta/sernik-wiedenski.webp"
     },
     {
       id: 4,
       name: 'Szarlotka',
-      img: "../imgs/offersImgs/Ciasta/szarlotka.jpg"
+      img: "../imgs/offersImgs/Ciasta/szarlotka.webp"
     }
   ],
 
@@ -59,22 +59,22 @@ export const offers = {
     {
       id: 0,
       name: 'Tort Czekoladowy',
-      img: "../imgs/offersImgs/Torty/tort-czekoladowy.jpg"
+      img: "../imgs/offersImgs/Torty/tort-czekoladowy.webp"
     },
     {
       id: 1,
       name: 'Tort Malinowy',
-      img: "../imgs/offersImgs/Torty/tort-malinowy.jpg"
+      img: "../imgs/offersImgs/Torty/tort-malinowy.webp"
     },
     {
       id: 2,
       name: 'Tort Pistacjowy',
-      img: "../imgs/offersImgs/Torty/tort-pistacjowy.jpg"
+      img: "../imgs/offersImgs/Torty/tort-pistacjowy.webp"
     },
     {
       id: 3,
       name: 'Tort Kokosowy',
-      img: "../imgs/offersImgs/Torty/tort-kokosowy.jpg"
+      img: "../imgs/offersImgs/Torty/tort-kokosowy.webp"
     }
   ],
 
@@ -82,22 +82,22 @@ export const offers = {
     {
       id: 0,
       name: 'Kawa Americano',
-      img: '../imgs/offersImgs/Kawy/americano.jpg'
+      img: '../imgs/offersImgs/Kawy/americano.webp'
     },
     {
       id: 1,
       name: 'Kawa Espresso',
-      img: '../imgs/offersImgs/Kawy/espresso.jpg'
+      img: '../imgs/offersImgs/Kawy/espresso.webp'
     },
     {
       id: 2,
       name: 'Kawa Latte Karmelowa',
-      img: '../imgs/offersImgs/Kawy/latte-karmelowe.jpg'
+      img: '../imgs/offersImgs/Kawy/latte-karmelowe.webp'
     },
     {
       id: 3,
       name: 'Kawa Latte Klasyczna',
-      img: '../imgs/offersImgs/Kawy/latte-klasyczne.jpg'
+      img: '../imgs/offersImgs/Kawy/latte-klasyczne.webp'
     },
   ],
 
@@ -105,22 +105,22 @@ export const offers = {
     {
       id: 0,
       name: 'Gorąca Czekolada',
-      img: "../imgs/offersImgs/Napoje/goraca-czekolada.jpg"
+      img: "../imgs/offersImgs/Napoje/goraca-czekolada.webp"
     },
     {
       id: 1,
       name: 'Herbata Owocowa',
-      img: "../imgs/offersImgs/Napoje/herbata-owocowa.jpg"
+      img: "../imgs/offersImgs/Napoje/herbata-owocowa.webp"
     },
     {
       id: 2,
       name: 'Herbata Zielona',
-      img: "../imgs/offersImgs/Napoje/herbata-zielona.jpg"
+      img: "../imgs/offersImgs/Napoje/herbata-zielona.webp"
     },
     {
       id: 3,
       name: 'Lemoniada Cytrynowa',
-      img: "../imgs/offersImgs/Napoje/lemoniada.jpg"
+      img: "../imgs/offersImgs/Napoje/lemoniada.webp"
     }
   ]
 }
@@ -135,7 +135,7 @@ export const offers = {
 export const menuItems = [
     {
     name: 'Desery',
-    imgURL: '../imgs/sernik-owocowy.jpg',
+    imgURL: '../imgs/sernik-owocowy.webp',
     items: [
       { name: 'Panna cotta waniliowa', price: 18.50, weigth: '150g' },
       { name: 'Panna cotta malinowa', price: 19.50, weigth: '150g' },
@@ -151,7 +151,7 @@ export const menuItems = [
   },
   {
     name: 'Ciasta',
-    imgURL: '../imgs/serniczek-malinowy.jpg',
+    imgURL: '../imgs/serniczek-malinowy.webp',
     items: [
       { name: 'Szarlotka domowa', price: 16.00, weigth: '150g' },
       { name: 'Sernik wiedeński', price: 18.00, weigth: '160g' },
@@ -166,7 +166,7 @@ export const menuItems = [
   },
   {
     name: 'Torty',
-    imgURL: '../imgs/tort-czekoladowy.jpg',
+    imgURL: '../imgs/tort-czekoladowy.webp',
     items: [
       { name: 'Tort czekoladowy', price: 22.00, weigth: '160g' },
       { name: 'Tort śmietankowo-owocowy', price: 21.50, weigth: '160g' },
@@ -181,7 +181,7 @@ export const menuItems = [
   },
   {
     name: 'Kawy',
-    imgURL: '../imgs/kawa.jpg',
+    imgURL: '../imgs/kawa.webp',
     items: [
       { name: 'Espresso', price: 9.00, weigth: '30ml' },
       { name: 'Espresso doppio', price: 12.00, weigth: '60ml' },
@@ -197,7 +197,7 @@ export const menuItems = [
   },
   {
     name: 'Napoje',
-    imgURL: '../imgs/napoj.jpg',
+    imgURL: '../imgs/napoj.webp',
     items: [
       { name: 'Herbata czarna', price: 10.00, weigth: '250ml' },
       { name: 'Herbata zielona', price: 10.00, weigth: '250ml' },

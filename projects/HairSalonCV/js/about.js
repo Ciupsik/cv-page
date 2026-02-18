@@ -41,3 +41,69 @@ function headerMobileHandler() {
 
 
 headerMobileHandler()
+
+
+
+
+
+
+
+function imageZoomHandler() {
+
+  const lightbox = document.querySelector('.lightbox');
+  const lightboxImg = document.querySelector('.lightbox-img');
+
+  const close = document.querySelector('.lightbox .close')
+
+  const portfolioImgs = document.querySelectorAll('.portfolio img');
+  const salonImgs = document.querySelectorAll('.salons img');
+
+
+  portfolioImgs.forEach((img) => {
+    img.addEventListener('click', () => {
+
+      lightbox.style.display = 'flex'
+      lightboxImg.src = img.src;
+
+    })
+  })
+
+
+  salonImgs.forEach((img) => {
+    img.addEventListener('click', () => {
+
+      lightbox.style.display = 'flex'
+      lightboxImg.src = img.src;
+
+      console.log(1)
+
+    })
+  })
+
+
+
+  close.addEventListener('click', () => {
+
+    lightbox.style.display = 'none'
+    lightboxImg.src = "";
+    
+  })
+
+
+  lightbox.addEventListener('click', (e) => {
+
+    if(e.target === lightbox) {
+      lightbox.style.display = 'none'
+      lightboxImg.src = "";
+    }
+
+  })
+
+}
+
+
+
+
+
+
+imageZoomHandler()
