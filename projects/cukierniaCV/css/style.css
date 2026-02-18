@@ -150,7 +150,7 @@ p {
 
 .header .image {
   height: calc(2.5rem + 8px);
-  width: auto;
+  width: calc(2.5rem + 8px);
   margin-bottom: .1rem;
 
   cursor: pointer;

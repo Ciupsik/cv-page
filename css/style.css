@@ -12,7 +12,7 @@ html {
 
 
 body {
-  background-color: rgb(0, 0, 0);
+  background-color: rgb(223, 223, 223);
   margin: 0;
   padding: 0;
   font-family: var(--font-body);
@@ -55,7 +55,7 @@ a {
 .btn-white {
   color: black;
   background-color: rgb(240, 240, 240);
-  padding: .6rem 1.3rem;
+  padding: .6rem 1.2rem;
   border-radius: 1.5rem;
   font-weight: 450;
   font-family:var(--font-button);
@@ -63,6 +63,7 @@ a {
   text-align: center;
   display: inline-block;
   cursor: pointer;
+  font-size: clamp(0.75rem, 6vw, 1rem);
 
   transition: background-color 0.2s ease-in-out;
 }
@@ -75,12 +76,13 @@ a {
   display: inline-block;
   background-color: transparent;
   border: solid 2px rgb(240, 240, 240);
-  padding: .6rem 1.3rem;
+  padding: .6rem 1.2rem;
   border-radius: 1.5rem;
   font-weight: 450;
   font-family:var(--font-button);
   text-align: center;
   cursor: pointer;
+  font-size: clamp(0.75rem, 6vw, 1rem);
 
   transition: 
   background-color 0.2s ease-in-out,
@@ -121,7 +123,7 @@ a {
   right: 1rem;
   background-color: rgb(11, 11, 12);
   z-index: 100;
-  padding: .8rem 2rem;
+  padding: .8rem min(2rem, 6vw);
   border-radius: 1.5rem;
   border: solid 1px rgb(170, 170, 170);
   max-width: 60rem;
@@ -156,10 +158,9 @@ a {
   display: none;
   flex-direction: column;
   align-items: center;
-
   position: fixed;
-  height: 350px;
-  width: 170px;
+  height: calc(190px + 10rem);
+  width: calc(42px + 8rem);
   background: linear-gradient(to bottom right, rgb(19, 19, 19), rgb(32, 32, 33));
   right: 0;
   top: 8rem;
@@ -178,6 +179,7 @@ a {
   justify-content: center;
   width: 100%;
   cursor: pointer;
+
   
   transition: background-color 0.2s ease-in-out;
 }
@@ -221,11 +223,11 @@ a {
   display: none;
   align-items: center;
   flex-direction: row;
-  column-gap: min(2rem, 3vw);
+  column-gap: min(2rem, 2.5vw);
 }
 
 .header .desktop-nav a {
-  font-size: 1.15rem;
+  font-size: clamp(17px, 3.5vw, 1.15rem);
   color: rgba(255, 255, 255, 0.8);
   cursor: pointer;
   
@@ -363,6 +365,7 @@ a {
 
   .hero .text .btns {
     flex-direction: row;
+    gap: clamp(24px, 5vw, 1.5rem);
   }
 }
 
@@ -453,7 +456,7 @@ a {
 
 
 .features .features-inner .feature .title {
-  font-size: 1.5rem;
+  font-size: clamp(24px, 8vw, 1.5rem);
   font-weight: 600;
   color: white;
   padding-bottom: 1.5rem;
@@ -503,6 +506,10 @@ a {
   .features .features-inner .feature {
     max-width: 36rem;
     width: 100%;
+  }
+
+  .features .features-inner .feature .title {
+    font-size: clamp(24px, 4vw, 1.5rem)
   }
 }
 
@@ -625,7 +632,7 @@ a {
 .offer .offer-inner .pricing .price-box {
   display: flex;
   flex-direction: column;
-  padding: 1.5rem;
+  padding: clamp(1rem, 10vw, 1.5rem);
   border: solid 1px rgb(170, 170, 170);
   border-radius: 1.5rem;
   
@@ -638,7 +645,8 @@ a {
 }
 
 .offer .offer-inner .pricing .price-box .price {
-  font-size: 1.7rem;
+  font-size: clamp(28px, 15vw, 1.7rem);
+  line-height: 115%;
   color: white;
   font-weight: 550;
   padding-bottom: 2rem;
@@ -653,7 +661,7 @@ a {
 
 .offer .offer-inner .pricing .price-box ul li {
   color: rgba(255, 255, 255, 0.75);
-  font-size: 1.1rem;
+  font-size: clamp(16px, 7.5vw, 1.1rem);
   font-weight: 250;
 }
 
@@ -698,6 +706,7 @@ a {
 @media (min-width: 425px) {
   .offer .btns {
     flex-direction: row;
+    gap: clamp(24px, 5vw, 1.5rem);
   }
 }
 
@@ -849,7 +858,7 @@ a {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 1.5rem;
+  padding: clamp(16px, 5vw, 1.5rem);
 
   border: 1px solid;
   border-image-slice: 1;
@@ -1138,7 +1147,7 @@ a {
   flex-direction: column;
   flex: 0 0 100%;
   background: linear-gradient(to bottom right, rgb(9, 9, 9), rgb(47, 47, 49));
-  padding: 1.5rem 1rem;
+  padding: 1rem;
   border-radius: 1rem;
   border: solid 1px rgb(111, 111, 111);
 
@@ -1155,33 +1164,35 @@ a {
   color: white;
   font-size: 1.2rem;
   white-space: pre;
-  padding-bottom: 4rem;
+  padding-bottom: 3rem;
 }
 
 .cooperation .scroller .block .title {
-  font-size: 1.65rem;
+  font-size: 1.5rem;
   font-weight: 400;
   color: white;
   padding-bottom: 1rem;
 }
 
 .cooperation .scroller .block .desc {
-  font-size: 1.15rem;
-  padding-bottom: 3rem;
+  font-size: 1rem;
+  padding-bottom: 2.5rem;
+  line-height: 130%;
   color: rgba(255, 255, 255, 0.5);
 }
 
 .cooperation .scroller .block .execution-time {
-  font-size: 1rem;
+  font-size: 0.85rem;
   font-weight: 550;
-  padding-bottom: .5rem;
+  padding-bottom: .25rem;
   color: rgba(255, 255, 255, 0.75);
 }
 
 .cooperation .scroller .block .time {
-  font-size: 1.65rem;
+  font-size: 1.5rem;
   font-weight: 400;
   color: white;
+
 }
 
 
@@ -1211,17 +1222,6 @@ a {
 
 
 
-@media (min-width: 725px) {
-
-
-
-}
-
-
-
-
-
-
 
 @media (min-width: 1025px) {
 
@@ -1244,15 +1244,15 @@ a {
 
   .cooperation .scroller .line {
 
-    width: min(100%, calc((32rem + 2rem) * 5));
-    left: min(calc((100% - 200px - 4rem) / 4 + 200px), 200px + 450px / 2);
+    width: min(calc(250% - 500px), 170rem);
 
-    left: calc(200px + 16rem);
 
-    left: 200px;
+    left: min(calc(200px + 25% - 50px - 1rem), 200px + 16rem);
+
+    
   }
 
- 
+
 
   .cooperation .nav {
 
@@ -1651,6 +1651,7 @@ textarea:-webkit-autofill:focus {
 @media (min-width: 425px) {
   .contact-us .btns {
     flex-direction: row;
+    gap: clamp(24px, 5vw, 1.5rem);
   }
 }
 
@@ -1665,11 +1666,11 @@ textarea:-webkit-autofill:focus {
 
 
 
-@media (min-width: 925px) {
+@media (min-width: 1025px) {
 
   .contact-us {
     flex-direction: row;
-    column-gap: clamp(48px, 15vw, 5rem);
+    column-gap: clamp(48px, 15vw, 80px);
     justify-content: center;
   }
 
@@ -1679,7 +1680,7 @@ textarea:-webkit-autofill:focus {
   }
 
   .contact-us .form {
-    min-width: 16rem;
+    min-width: calc(128px + 8rem);
   }
 
 }
@@ -1719,7 +1720,7 @@ textarea:-webkit-autofill:focus {
 
 
 .footer .logo {
-  font-size: clamp(1.25rem, 20vw, 6rem);
+  font-size: clamp(1.25rem, 15vw, 6rem);
   color: white;
   font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
   font-weight: 550;
@@ -1795,7 +1796,9 @@ textarea:-webkit-autofill:focus {
     max-width: 90rem;
     width: 90%;
     justify-content: space-between;
+    column-gap: 1.5rem;
   }
+  
 
   .footer .links {
     align-items: flex-start;
