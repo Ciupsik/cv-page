@@ -296,7 +296,7 @@ a {
   justify-content: center;
   position: relative;
 
-  max-width: min(60%, 50rem, 50vh);
+  max-width: min(95%, 50rem, 50vh);
 
   background-color: red;
 }
@@ -321,9 +321,9 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 40px;
-  width: 40px;
-  border-radius: 2px;
+  height: calc(2rem + 8px);
+  width: calc(2rem + 8px);
+  border-bottom-left-radius: .2rem;
   cursor: pointer;
 }
 
@@ -331,6 +331,19 @@ a {
 
 
 
+
+@media (min-width: 425px) {
+  .lightbox .image {
+    max-width: min(80%, 50rem, 50vh);
+  }
+}
+
+
+@media (min-width: 725px) {
+  .lightbox .image {
+    max-width: min(60%, 50rem, 50vh);
+  }
+}
 
 
 
