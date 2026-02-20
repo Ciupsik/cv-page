@@ -4,8 +4,6 @@
 
 
 
-
-
 // mobile to desktop change handler
 
 function mobileNavDisplay() {
@@ -61,10 +59,6 @@ mobileNavDisplay()
 
 
 
-
-
-
-
 // cooperation mobile touch handler
 
 
@@ -110,14 +104,6 @@ scrollerTouchHandler()
 
 
 
-
-
-
-
-
-
-
-
 // cooperation scroller navigation
 
 function scrollerButtons() {
@@ -144,13 +130,6 @@ function scrollerButtons() {
 
 
 scrollerButtons()
-
-
-
-
-
-
-
 
 
 
@@ -197,9 +176,6 @@ faqQuestionsHeight();
 
 
 
-
-
-
 // form handler
 
 
@@ -223,14 +199,14 @@ function formHandler() {
       });
 
       if (response.ok) {
-        status.textContent = "Wiadomość wysłana ✅";
+        status.textContent = "Wiadomość wysłana";
         form.reset();
       } else {
-        status.textContent = "Coś poszło nie tak ❌";
+        status.textContent = "Coś poszło nie tak";
       }
 
     } catch (error) {
-      status.textContent = "Błąd sieci ❌";
+      status.textContent = "Błąd sieci";
       console.error(error);
     }
 
@@ -242,3 +218,89 @@ function formHandler() {
 }
 
 formHandler()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// -------------------LocalStorage - linki afiliacyjne-------------------
+
+
+
+
+
+function paramsTracking() {
+  const params = new URLSearchParams(window.location.search);
+  const ref = params.get('ref');
+
+  if (ref && !localStorage.getItem('affiliate_ref')) {
+    localStorage.setItem('affiliate_ref', ref);
+    
+
+    sendToMake(ref);
+  }
+}
+
+
+
+
+async function sendToMake(refValue) {
+  const webhookUrl = 'https://hook.eu1.make.com/092mjraiogpfinfmbex5se3rjyve2vld';
+
+  const payload = {
+    event_type: "new_affiliate_visit",
+    affiliate_id: refValue,
+    page_url: window.location.href,
+    user_agent: navigator.userAgent,
+    timestamp: new Date().toISOString()
+  };
+
+  try {
+    await fetch(webhookUrl, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
+    });
+    console.log('Dane wysłane do Make!');
+  } catch (error) {
+    console.error('Błąd wysyłki:', error);
+  }
+}
+
+
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  paramsTracking();
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
