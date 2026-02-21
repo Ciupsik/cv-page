@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Youi.pl - Twój Projekt</title>
+    <meta name="description" content="Wypełnij krótki formularz i opowiedz nam o swoim pomyśle. Dzięki Twoim odpowiedziom przygotujemy ofertę idealnie dopasowaną do Twoich potrzeb. Zacznijmy projekt!">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="../css/form.css">
+
+    <script src="https://t.contentsquare.net/uxa/cbdb62a80e221.js"></script>
+
+  </head>
+  <body>
+
+    <form class="form">
+
+      <div class="logo">
+        <p>YOUI</p>
+      </div>
+
+      <div class="message">
+        <h1>Rozpocznijmy Twój Projekt</h1>
+        <p class="title">Odpowiedz na pytania a my zajmiemy się resztą</p>
+        <p class="required">* Wskazuje wymagane pytanie</p>
+      </div>
+
+      <div class="form-group">
+        <label class="question" for="name">Imię i nazwisko <span class="required">*</span></label>
+        <input class="text-input" type="text" id="UserName" name="UserName" autocomplete="off" required placeholder="Twoja odpowiedź">
+      </div>
+
+      <div class="form-group">
+        <label class="question" for="CompName">Nazwa Firmy <span class="required">*</span></label>
+        <input class="text-input" type="text" id="CompName" name="CompName"  autocomplete="off" required placeholder="Twoja odpowiedź">
+      </div>
+
+      <div class="form-group">
+        <label class="question" for="email">Adres e-mail <span class="required">*</span></label>
+        <input class="text-input" type="email" id="email" name="email"  autocomplete="off" required placeholder="Twoja odpowiedź">
+      </div>
+
+      <div class="form-group">
+        <label class="question" for="phone">Numer telefonu <span class="required">*</span></label>
+        <input class="text-input" type="tel" id="phone" name="phone"  autocomplete="off" pattern="[0-9]{9,15}" required placeholder="Twoja odpowiedź">
+      </div>
+
+      <div class="form-group">
+        <label class="question" for="OldSite">Czy posiadasz już stronę internetową i chcesz ją "odświeżyć" - jeśli tak podaj jej nazwę</label>
+        <input class="text-input" type="text" id="OldSite" name="OldSite"  autocomplete="off" placeholder="Twoja odpowiedź">
+      </div>
+
+
+
+      <div class="form-group">
+        <label class="question">Jaka będzie struktura twojej strony?</label>
+        <div class="radio-group">
+          <label>
+            <input class="radio-input" type="radio" name="structure" value="Jedna strona (one page)" required>
+            Jedna strona (one page)
+          </label>
+          <label>
+            <input class="radio-input" type="radio" name="structure" value="2-4 podstron">
+            2-4 podstron
+          </label>
+          <label>
+            <input class="radio-input" type="radio" name="structure" value="5-7 podstron">
+            5-7 podstron
+          </label>
+          <label>
+            <input class="radio-input" type="radio" name="structure" value="8+ podstron">
+            8+ podstron
+          </label>
+          <label>
+            <input class="radio-input" type="radio" name="structure" value="Nie wiem / potrzebuję pomocy">
+            Nie wiem / potrzebuję pomocy
+          </label>
+        </div>
+      </div>
+
+
+
+      <div class="form-group">
+        <label class="question">Jakie sekcje mają znaleźć się na stronie?</label>
+        <div class="checkbox-group">
+          <label>
+            <input class="checkbox-input" type="checkbox" name="interests[]" value="Oferta / usługi">
+            Oferta / usługi
+          </label>
+          <label>
+            <input class="checkbox-input" type="checkbox" name="interests[]" value="Cennik">
+            Cennik
+          </label>
+          <label>
+            <input class="checkbox-input" type="checkbox" name="interests[]" value="Galeria zdjęć">
+            Galeria zdjęć
+          </label>
+          <label>
+            <input class="checkbox-input" type="checkbox" name="interests[]" value="O nas / O firmie">
+            O nas / O firmie
+          </label>
+          <label>
+            <input class="checkbox-input" type="checkbox" name="interests[]" value="Opinie klientów">
+            Opinie klientów
+          </label>
+          <label>
+            <input class="checkbox-input" type="checkbox" name="interests[]" value="Kontakt">
+            Kontakt
+          </label>
+          <label>
+            <input class="checkbox-input" type="checkbox" name="interests[]" value="Faq">
+            Faq
+          </label>
+
+          <label>
+            <input class="checkbox-input" type="checkbox" id="other-checkbox-interests" name="interests[]" value="Inne">
+            Inne
+            <input class="text-input other-option" type="text" id="other-text-interests" name="other-text-interests" autocomplete="off" placeholder="">
+          </label>
+        </div>
+      </div>
+
+
+      
+      <div class="form-group">
+        <label class="question">Czy potrzebujesz rezerwacji online na stronie?<br>(Rezerwacje są możliwe jako konfiguracja strony np. z Booksy)  </label>
+        <div class="radio-group">
+          <label>
+            <input class="radio-input" type="radio" name="reservations" value="Tak" required>
+            Tak
+          </label>
+          <label>
+            <input class="radio-input" type="radio" name="reservations" value="Nie">
+            Nie
+          </label>
+        </div>
+      </div>
+
+
+
+      <div class="form-group">
+        <label class="question">Jakie dodatkowe funkcje mają znaleźć się na stronie?  </label>
+        <div class="checkbox-group">
+          <label>
+            <input class="checkbox-input" type="checkbox" name="additionalFunctions[]" value="Formularz kontaktowy">
+            Formularz kontaktowy
+          </label>
+          <label>
+            <input class="checkbox-input" type="checkbox" name="additionalFunctions[]" value="Integracja z mediami społecznościowymi">
+            Integracja z mediami społecznościowymi
+          </label>
+          <label>
+            <input class="checkbox-input" type="checkbox" name="additionalFunctions[]" value="Google Maps">
+            Google Maps
+          </label>
+          <label>
+            <input class="checkbox-input" type="checkbox" name="additionalFunctions[]" value="Przycisk „Zadzwoń teraz”">
+            Przycisk „Zadzwoń teraz”
+          </label>
+          <label>
+            <input class="checkbox-input" type="checkbox" name="additionalFunctions[]" value="Newsletter / zapis do mailingu">
+            Newsletter / zapis do mailingu
+          </label>
+          <label>
+            <input class="checkbox-input" type="checkbox" name="additionalFunctions[]" value="Optymalizacja SEO">
+            Optymalizacja SEO
+          </label>
+
+          <label>
+            <input class="checkbox-input" type="checkbox" id="other-checkbox-additionalFunctions" name="additionalFunctions[]" value="Inne">
+            Inne
+            <input class="text-input other-option" type="text" id="other-text-additionalFunctions" name="other-text-additionalFunctions" autocomplete="off" placeholder="">
+          </label>
+        </div>
+      </div>
+
+
+
+      <div class="form-group">
+        <label class="question">Czy chcesz, aby strona była nastawiona na</label>
+        <div class="checkbox-group">
+          <label>
+            <input class="checkbox-input" type="checkbox" name="focus[]" value="Klientów lokalnych">
+            Klientów lokalnych
+          </label>
+          <label>
+            <input class="checkbox-input" type="checkbox" name="focus[]" value="Klientów premium">
+            Klientów premium
+          </label>
+          <label>
+            <input class="checkbox-input" type="checkbox" name="focus[]" value="Szybki kontakt (telefon / formularz)">
+            Szybki kontakt (telefon / formularz)
+          </label>
+
+          <label>
+            <input class="checkbox-input" type="checkbox" id="other-checkbox-focus" name="focus[]" value="Inne">
+            Inne
+            <input class="text-input other-option" type="text" id="other-text-focus" name="other-text-focus" autocomplete="off" placeholder="">
+          </label>
+        </div>
+      </div>
+
+
+
+      <div class="form-group">
+        <label class="question">Czy posiadasz gotowe materiały?</label>
+        <div class="checkbox-group">
+          <label>
+            <input class="checkbox-input" type="checkbox" name="materials[]" value="Logo">
+            Logo
+          </label>
+          <label>
+            <input class="checkbox-input" type="checkbox" name="materials[]" value="Teksty">
+            Teksty
+          </label>
+          <label>
+            <input class="checkbox-input" type="checkbox" name="materials[]" value="Grafiki / zdjęcia">
+            Grafiki / zdjęcia
+          </label>
+          <label>
+            <input class="checkbox-input" type="checkbox" name="materials[]" value="Nie - potrzebuję pomocy w przygotowaniu treści">
+            Nie - potrzebuję pomocy w przygotowaniu treści
+          </label>
+        </div>
+      </div>
+
+
+
+      <div class="form-group">
+        <label class="question" for="companyDescription">Krótki opis Twojej firmy  -  czym się zajmujesz, jakie usługi oferujesz, do kogo kierujesz swoją ofertę?</label>
+        <input class="text-input" type="text" id="companyDescription" name="companyDescription"  autocomplete="off" placeholder="Twoja odpowiedź">
+      </div>
+      
+      <div class="form-group">
+        <label class="question" for="inspirationLinks">Linki do stron, które Ci się podobają - czym możemy się inspirować</label>
+        <input class="text-input" type="text" id="inspirationLinks" name="inspirationLinks"  autocomplete="off" placeholder="Twoja odpowiedź">
+      </div>
+
+      <div class="form-group">
+        <label class="question" for="inportantComments">Czy jest coś szczególnie ważnego, na co powinniśmy zwrócić uwagę przy projektowaniu strony?  </label>
+        <input class="text-input" type="text" id="inportantComments" name="inportantComments"  autocomplete="off" placeholder="Twoja odpowiedź">
+      </div>
+
+
+
+      <div class="form-group">
+        <label class="question">Czy posiadasz domenę i hosting?</label>
+        <div class="radio-group">
+          <label>
+            <input class="radio-input" type="radio" name="domain" value="Tak" required>
+            Tak
+          </label>
+          <label>
+            <input class="radio-input" type="radio" name="domain" value="Nie">
+            Nie
+          </label>
+          <label>
+            <input class="radio-input" type="radio" name="domain" value="Nie wiem / potrzebuję pomocy">
+            Nie wiem / potrzebuję pomocy
+          </label>
+        </div>
+      </div>
+
+      
+
+      <div class="btns-div">
+        <button type="submit" class="submit-btn">Prześlij</button>
+      </div>
+
+    </form>
+
+
+
+
+    <script src="../js/form.js" type="module"></script>
+  </body>
+</html>

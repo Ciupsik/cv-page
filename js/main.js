@@ -180,51 +180,59 @@ faqQuestionsHeight();
 
 
 
-function formHandler() {
-  const form = document.querySelector(".contact-us .form");
-  const status = document.querySelector(".contact-us .form-status"); // element na komunikaty
 
-  form.addEventListener("submit", async (e) => {
+
+
+
+
+
+
+
+
+
+function formSubmitHandler() {
+  const form = document.querySelector(".contact-us .form");
+  const status = document.querySelector(".contact-us .form-status");
+
+  form.addEventListener('submit', async (e) => {
     e.preventDefault();
 
-    const data = new FormData(form);
+    const formData = new FormData(form);
+    const data = Object.fromEntries(formData.entries());
+
+    /** 
+    if (!data.name?.trim() || !data.email?.trim()) {
+      alert("Wypełnij wszystkie wymagane pola.");
+      return;
+    }*/
+
+    data.form_type = 'contact';
+
+    data.ref = localStorage.getItem('affiliate_ref') || '';
+    data.timestamp = new Date().toLocaleString('pl-PL');
+
+    //console.log("Obiekt wysyłany do make:", data);
 
     try {
-      const response = await fetch(form.action, {
-        method: "POST",
-        body: data,
-        headers: {
-          "Accept": "application/json"
-        }
+      const response = await fetch('https://hook.eu1.make.com/4unij60c3dtjpw47swxva7dq6miydqup', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
       });
 
-      if (response.ok) {
-        status.textContent = "Wiadomość wysłana";
-        form.reset();
-      } else {
-        status.textContent = "Coś poszło nie tak";
-      }
+      if (!response.ok) throw new Error('Błąd połączenia z serwerem');
 
-    } catch (error) {
-      status.textContent = "Błąd sieci";
-      console.error(error);
+      form.reset();
+      alert('Formularz wysłany');
+
+    } catch (err) {
+      console.error(err);
+      alert('Błąd wysyłania');
     }
-
-
-    setTimeout(() => {
-      status.textContent = ''
-    }, 5000)
   });
 }
 
-formHandler()
-
-
-
-
-
-
-
+formSubmitHandler();
 
 
 
@@ -277,7 +285,7 @@ async function sendToMake(refValue) {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(payload)
     });
-    console.log('Dane wysłane do Make!');
+    //console.log('Dane wysłane do make');
   } catch (error) {
     console.error('Błąd wysyłki:', error);
   }

@@ -345,6 +345,8 @@ a {
   padding-bottom: 2rem;
 
   flex: 1;
+
+  filter: brightness(1.15);
 }
 
 .hero .image img {
